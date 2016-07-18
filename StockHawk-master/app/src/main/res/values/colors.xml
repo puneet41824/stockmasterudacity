@@ -5,6 +5,11 @@
   <color name="material_red_700">#D50000</color>
   <color name="material_green_700">#00C853</color>
 
+
+  <color name="layout_background">#09C</color>
+
+  <color name="text_color">#ffffff</color>
+
   <!-- Line graph colors -->
   <color name="line_set">#e50000</color>
   <color name="line_stroke">#e50000</color>
