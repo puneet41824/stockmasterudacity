@@ -13,5 +13,5 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="widget_title">Stock Widget</string>
-    <string name="string_symbol">$</string>
+    <string name="string_symbol">symbol</string>
 </resources>

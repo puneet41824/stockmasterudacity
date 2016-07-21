@@ -17,6 +17,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.InputType;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +39,8 @@ import com.google.android.gms.gcm.PeriodicTask;
 import com.google.android.gms.gcm.Task;
 import com.melnykov.fab.FloatingActionButton;
 import com.sam_chordas.android.stockhawk.touch_helper.SimpleItemTouchHelperCallback;
+
+import java.util.Arrays;
 
 public class MyStocksActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -100,7 +103,9 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
                         // do something on item click
                         Intent graphIntent = new Intent(mContext, StockDetailActivity.class);
                         mCursor.moveToPosition(position);
+                        Log.e("Cursor Columns", "onItemClick: " + Arrays.toString(mCursor.getColumnNames()));
                         graphIntent.putExtra(getResources().getString(R.string.string_symbol), mCursor.getString(mCursor.getColumnIndex(getResources().getString(R.string.string_symbol))));
+                       // graphIntent.putExtra(getResources().getString(R.string.string_symbol),"GOOG");
                         mContext.startActivity(graphIntent);
                     }
                 }));
